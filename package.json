@@ -1,0 +1,42 @@
+{
+    "name": "com.fuzzphyte.systemevent",
+    "version": "0.1.0",
+    "displayName": "FP Event",
+    "description": "FP Event is an event system based upon Unity and designed to work with other FP systems, it sits onto Inventory, Dialogue, Graph, and others.",
+    "unity": "2022.3",
+    "unityRelease": "32f1",
+    "documentationUrl": "https://github.com/jshull/FP_Event/README.md",
+    "changelogUrl": "https://github.com/jshull/FP_Event/CHANGELOG.md",
+    "licensesUrl": "https://github.com/jshull/FP_Event/LICENSE.md",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/jshull/FP_Event.git"
+    },
+    "dependencies": {
+      "com.unity.mathematics": "1.2.6",
+      "com.unity.textmeshpro": "3.0.6",
+      "com.fuzzphyte.utility":"https://github.com/jshull/FP_Utility.git",
+      "com.fuzzphyte.dialogue":"https://github.com/jshull/FP_Dialogue.git",
+      "com.fuzzphyte.inventory":"https://github.com/jshull/FP_Inventory.git",
+      "com.fuzzphyte.sgraph":"https://github.com/jshull/FP_SGraph.git"
+    },
+    "samples": [
+      {
+        "displayName": "Utility Samples",
+        "description": "Samples for the Event System",
+        "path": "Samples~/SamplesURP"
+      }
+    ],
+    "keywords": [
+      "ScriptableObject",
+      "FuzzPhyte",
+      "Utility",
+      "Events"
+    ],
+    "author": {
+      "name": "John Shull",
+      "email": "the.john.shull@gmail.com",
+      "url": "https://github.com/jshull"
+    },
+    "type": "tool"
+  }
