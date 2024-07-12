@@ -1,0 +1,17 @@
+{
+    "name": "com.fuzzphyte.systemevent.samples",
+    "rootNamespace": "FuzzPhyte.SystemEvent.Samples",
+    "references": [
+        "com.fuzzphyte.systemevent",
+        "com.fuzzphyte.utility"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

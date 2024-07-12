@@ -1,13 +1,16 @@
 namespace FuzzPhyte.SystemEvent
 {
-    using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
-
+    using FuzzPhyte.Utility;
     public class FP_EventManager<T> : MonoBehaviour where T : FPEvent
     {
         public static FP_EventManager<T> Instance { get; private set; }
+        protected bool UsePriorityQueue = false;
 
+        protected PriorityQueue<FPEventComponent<T>> TheEventQueue = new PriorityQueue<FPEventComponent<T>>();
+        //protected Dictionary<string,FPEventComponent<T>> eventQueueComponents = new Dictionary<string, FPEventComponent<T>>();
+        
         private List<FPEventComponent<T>> recordedEvents = new List<FPEventComponent<T>>();
 
         private void Awake()
@@ -25,8 +28,15 @@ namespace FuzzPhyte.SystemEvent
 
         public void RecordEvent(FPEventComponent<T> eventComponent)
         {
-            recordedEvents.Add(eventComponent);
-            Debug.Log($"Event Recorded: {eventComponent.GetUniqueID()} - {eventComponent.gameEvent.name}");
+            
+            if(UsePriorityQueue)
+            {
+                TheEventQueue.Enqueue(eventComponent);
+            }else
+            {
+                recordedEvents.Add(eventComponent);
+            }
+            Debug.Log($"Event Recorded: {eventComponent.GetEventUniqueID()} - {eventComponent.GameEvent.name}");
         }
 
         /// <summary>
@@ -34,14 +44,27 @@ namespace FuzzPhyte.SystemEvent
         /// </summary>
         public void ProcessRecordedManagerEvents(bool clearList = true)
         {
-            foreach (var eventComponent in recordedEvents)
+            //what/how to utilize the priority queue if we need to or want to
+            if(UsePriorityQueue)
             {
-                eventComponent.ManagerEvent();
+                while (TheEventQueue.Count > 0)
+                {
+                    var fpComponentEvent = TheEventQueue.Dequeue();
+                    fpComponentEvent.ManagerEvent();
+                }
             }
-            if(clearList)
+            else
             {
-                recordedEvents.Clear();
+                foreach (var eventComponent in recordedEvents)
+                {
+                    eventComponent.ManagerEvent();
+                }
+                if(clearList)
+                {
+                    recordedEvents.Clear();
+                }
             }
+            
         }
     }
 }
