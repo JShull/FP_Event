@@ -2,10 +2,7 @@
     "name": "com.fuzzphyte.systemevent",
     "rootNamespace": "FuzzPhyte.SystemEvent",
     "references": [
-        "com.fuzzphyte.utility",
-        "com.fuzzphyte.inventory",
-        "com.fuzzphyte.dialogue",
-        "com.fuzzphyte.sgraph"
+        "com.fuzzphyte.utility"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
