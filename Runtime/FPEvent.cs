@@ -13,7 +13,7 @@ namespace FuzzPhyte.SystemEvent
         /// </summary>
         public int Priority { get; set; }
         public abstract void Execute(object data = null);
-        public int CompareTo(FPEvent other)
+        public virtual int CompareTo(FPEvent other)
         {
             if (other == null) return 1;
             return Priority.CompareTo(other.Priority);
