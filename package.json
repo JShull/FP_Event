@@ -1,13 +1,12 @@
 {
     "name": "com.fuzzphyte.systemevent",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "displayName": "FP Event",
-    "description": "FP Event is an event system based upon Unity and designed to work with other FP systems, it sits onto Inventory, Dialogue, Graph, and others.",
-    "unity": "2022.3",
-    "unityRelease": "32f1",
+    "description": "FP Event is an event system based upon Unity 6.4 and newer and designed to work with other FP systems, it sits onto Inventory, Dialogue, Graph, and others.",
+    "unity": "6000.4",
     "documentationUrl": "https://github.com/JShull/FP_Event/blob/main/README.md",
-    "changelogUrl": "https://github.com/jshull/FP_Event/blob/main/CHANGELOG.md",
-    "licensesUrl": "https://github.com/jshull/FP_Event/blob/main/LICENSE.md",
+    "changelogUrl": "https://github.com/JShull/FP_Event/blob/main/CHANGELOG.md",
+    "licensesUrl": "https://github.com/JShull/FP_Event/blob/main/LICENSE.md",
     "repository": {
       "type": "git",
       "url": "https://github.com/jshull/FP_Event.git"

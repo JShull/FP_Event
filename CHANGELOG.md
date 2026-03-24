@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-03-24
+
+### 0.3.0 Changed
+
+- [@JShull](https://github.com/jshull)
+  - Updated the package to require Unity `6.4+` with a minimum Unity version of `6000.4`.
+  - Refreshed package metadata and repository document links for the current GitHub default branch layout.
+
+### 0.3.0 Fixed
+
+- [@JShull](https://github.com/jshull)
+  - Replaced deprecated component instance ID usage in `FPEventComponent.cs` by switching `GetUniqueComponentID()` from `GetInstanceID()` to `GetEntityId()` for Unity 6.4 compatibility.
+
 ## [0.2.0] - 2025-7-1
 
 ### 0.2.0 Added
