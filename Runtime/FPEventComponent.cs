@@ -43,7 +43,7 @@ namespace FuzzPhyte.SystemEvent
         /// <returns></returns>
         public string GetUniqueComponentID()
         {
-            return GetInstanceID().ToString();
+            return GetEntityId().ToString();
         }
         /// <summary>
         /// This is a 'unique id' for the event but the event could be shared by other instances of FPEventComponent
